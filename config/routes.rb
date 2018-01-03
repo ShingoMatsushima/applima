@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   # エンジニア専用ページ(一旦、変更・削除はなし)
   resources :engineers, only: [:index, :show, :new, :create]
 
+  # アイデア(一旦、変更・削除はなし)
+  resources :ideas, only: [:index, :show, :new, :create]
+
 end

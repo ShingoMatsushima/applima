@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  # ログイン要求処理(ログインしていないと見られたくないページに設定)
   before_action :require_user_logged_in, only: [:show]
   
   def show
