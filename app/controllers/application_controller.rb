@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
   # helperメソッド使用の為のインクルード
   include SessionsHelper
+  include UsersHelper
+  include EngineersHelper
 
   private
 

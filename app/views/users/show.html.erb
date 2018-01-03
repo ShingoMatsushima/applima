@@ -1,4 +1,18 @@
-<div class="text-center">
-  <h1><%= @user.name %></h1>
+<div class="text-left">
+  <h3>会員プロフィール</h3>
+  <h4>ユーザID：<%= @user.id %></h4>
+  <h4>ユーザ名：<%= @user.name %></h4>
+  <h4>email   ：<%= @user.email %></h4>
+  <h4>登録種別：<%= @user.regtype %></h4>
 </div>
   
+<div class="text-center">
+  <% if engineer? %>
+    <% if write_profile? %>
+      <%= link_to 'エンジニアプロフィールを確認する', engineer_path(@user.engineer), class: 'btn btn-lg btn-primary' %>
+    <% else %>
+      <%= link_to 'エンジニアプロフィールを登録する', new_engineer_path, class: 'btn btn-lg btn-primary' %>
+    <% end %>
+  <% end %>
+</div>
+

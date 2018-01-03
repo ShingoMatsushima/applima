@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
+  # エンジニア専用ページ(一旦、変更・削除はなし)
+  resources :engineers, only: [:index, :show, :new, :create]
 
 end
